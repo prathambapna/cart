@@ -1,0 +1,90 @@
+1]initialiazed react
+create-react-app create
+
+2]deleted unnecessary code
+
+3]index.css
+//basic cart styling
+.cart-item{
+  display: inline-flex;
+  margin: 20px 10px;
+}
+
+.cart-item .right-block{
+  padding: 0 20px;
+}
+
+.cart-item-actions{
+  margin-top: 20px;
+}
+
+.action-icons{
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.action-icons:hover{
+  cursor: pointer;
+}
+
+4]index.js
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+
+const root=ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+
+
+5]CartItem.js
+import React from  "react";
+class CartItem extends React.Component{
+    render(){
+        return(
+            <div className="cart-item">
+                <div className="left-block">
+                    <img  style={styles.image}/>
+                </div>
+                <div className="right-block">
+                    <div style={{fontSize:25}}>Phone</div>
+                    <div style={{color:'#777'}}>Rs 999</div>
+                    <div style={{color:'#777'}}>Qty:1</div>
+                    <div className="cart-item-actions">
+                        {/* Buttons */}
+                    </div>
+
+                </div>
+            </div>
+        );
+    }
+}
+const styles={
+    image:{
+        height:110,
+        width:110,
+        borderRadius:4,
+        background:'#ccc',
+    }
+}
+export default CartItem;
+
+
+6]app.js
+import React from "react";
+import CartItem from "./CartItem";
+function App() {
+  return (
+    <div className="App">
+      <h1>CART</h1>
+      <CartItem />
+    </div>
+  );
+}
+
+export default App;
