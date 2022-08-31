@@ -174,4 +174,40 @@ const styles={
 }
 export default CartItem;
 
-8]
+8]app.js
+import React from "react";
+import Cart from "./Cart";
+function App() {
+  return (
+    <div className="App">
+      <Cart />
+    </div>
+  );
+}
+
+export default App;
+
+
+9]index.css
+.cart{
+  display: flex;
+  flex-direction: column;
+}
+
+10]Cart.js
+import React from  "react";
+import CartItem from "./CartItem";
+class Cart extends React.Component{
+    render(){
+        return(
+           <div className="cart">
+                <CartItem />
+                <CartItem />
+                <CartItem />
+                <CartItem />
+           </div>
+        );
+    }
+}
+
+export default Cart;

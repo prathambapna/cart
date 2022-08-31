@@ -33,3 +33,14 @@ code {
 .action-icons:hover{
   cursor: pointer;
 }
+
+.cart{
+  display: flex;
+  flex-direction: column;
+}
+.itemimage{
+  height: 110px;
+  width: 110px;
+  border-radius: 4;
+  background-color: #ccc;
+}
